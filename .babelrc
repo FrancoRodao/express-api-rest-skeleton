@@ -1,0 +1,33 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"useBuiltIns": "usage",
+				"corejs": 3
+			}
+		]
+	],
+	"env": {
+		"production": {
+			"plugins": [
+				[
+					"inline-dotenv",
+					{
+						"path": ".env.production"
+					}
+				]
+			]
+		},
+		"development": {
+			"plugins": [
+				[
+					"inline-dotenv",
+					{
+						"path": ".env.development"
+					}
+				]
+			]
+		}
+	}
+}
